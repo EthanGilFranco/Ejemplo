@@ -19,10 +19,10 @@ public class NaveJugador : MonoBehaviour
         //Se coge el numero mirando lo que ocupa la mitad de la nave, como mi nave ocupa 0,5 se lo restamos o sumamos segun el eje y asi no se pasa, cogiuendo de referencia
         //la mitad justo
         MinPantalla.x = MinPantalla.x + 0.5f;
-        MaxPantalla.x = MinPantalla.x - 0.5f;
+        MaxPantalla.x = MaxPantalla.x - 0.5f;
 
-        MinPantalla.y = MinPantalla.x + 0.5f;
-        MaxPantalla.y = MinPantalla.y - 0.5f;
+        MinPantalla.y = MinPantalla.y + 0.5f;
+        MaxPantalla.y = MaxPantalla.y - 0.5f;
 
     }
 
@@ -39,8 +39,10 @@ public class NaveJugador : MonoBehaviour
         Vector2 NuevaPos = transform.position;
         NuevaPos = NuevaPos + DireccionIndicada * _Vel * Time.deltaTime;
 
+        Debug.Log(NuevaPos);
+
         NuevaPos.x = Mathf.Clamp(NuevaPos.x, MinPantalla.x, MaxPantalla.x);
-        NuevaPos.y = Mathf.Clamp(NuevaPos.x, MinPantalla.y, MaxPantalla.y);
+        NuevaPos.y = Mathf.Clamp(NuevaPos.y, MinPantalla.y, MaxPantalla.y);
 
         transform.position = NuevaPos;  
 
