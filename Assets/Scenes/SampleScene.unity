@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 1711524125}
   - component: {fileID: 1711524127}
   m_Layer: 0
-  m_Name: Nave Jugador
+  m_Name: Nave_Jugador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,6 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be8306aa830fc34888e195308030167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabProyectil: {fileID: 2029205138565158537, guid: 8472c4f6dd7d1b04887c0dab5711ef37, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
